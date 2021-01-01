@@ -1,1 +1,1 @@
-# pet_adoption_app
+Its a pet adoption app.
