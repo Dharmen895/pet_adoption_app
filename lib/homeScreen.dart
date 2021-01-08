@@ -16,9 +16,13 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return AnimatedContainer(
       transform: Matrix4.translationValues(xOffset, yOffset, 0)
-        ..scale(scaleFactor),
+        ..scale(scaleFactor)..rotateY(isDrawerOpen?-0.5:0),
       duration: Duration(milliseconds: 250),
-      color: Color(0xff74c7b8),
+
+      decoration: BoxDecoration(
+        color: Color(0xffFFFFFF),
+        borderRadius: BorderRadius.circular(isDrawerOpen?40:0.0) ,
+      ),
       child: SingleChildScrollView(
         child: Column(
           children: [
@@ -58,14 +62,14 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                   Column(
                     children: [
-                      Text('Location'),
+                      Text('Location',style: TextStyle(fontWeight: FontWeight.bold)),
                       Row(
                         children: [
                           Icon(
                             Icons.location_on,
                             color: darkBlue,
                           ),
-                          Text('Sikkim'),
+                          Text('Sikkim',style: TextStyle(fontWeight: FontWeight.bold)),
                         ],
                       ),
                     ],
@@ -85,7 +89,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Icon(Icons.search),
-                  Text('Search pet to adapt'),
+                  Text('Search pet to adapt',style: TextStyle(fontWeight: FontWeight.bold)),
                   Icon(Icons.settings)
                 ],
               ),
@@ -103,7 +107,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           padding: EdgeInsets.all(10),
                           margin: EdgeInsets.only(left: 10),
                           decoration: BoxDecoration(
-                            color: Colors.white,
+                            color: Color(0xffD3DFE4),
                             boxShadow: shadowList,
                             borderRadius: BorderRadius.circular(10),
                           ),
@@ -111,10 +115,10 @@ class _HomeScreenState extends State<HomeScreen> {
                             categories[index]['iconPath'],
                             height: 50,
                             width: 50,
-                            color: Colors.grey[700],
+                            color: Colors.grey[900],
                           ),
                         ),
-                        Text(categories[index]['name'])
+                        Text(categories[index]['name'],style: TextStyle(fontWeight: FontWeight.bold),)
                       ],
                     ),
                   );
@@ -135,7 +139,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       children: [
                         Container(
                           decoration: BoxDecoration(
-                              color: Color(0xff6f9eaf),
+                              color: Color(0xffCCD5D8),
                               borderRadius: BorderRadius.circular(20),
                               boxShadow: shadowList),
                           margin: EdgeInsets.only(top: 40),
@@ -172,7 +176,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           Container(
                             decoration: BoxDecoration(
-                                color: Colors.orange[200],
+                                color: Color(0xffECD3AE),
                                 borderRadius: BorderRadius.circular(20),
                                 boxShadow: shadowList),
                             margin: EdgeInsets.only(top: 40),

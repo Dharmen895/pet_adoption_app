@@ -12,7 +12,7 @@ class Screen2 extends StatelessWidget {
               children: [
                 Expanded(
                   child: Container(
-                    color: Color(0xff6f9eaf),
+                    color: Color(0xffCAD3D7),
                   ),
                 ),
                 Expanded(
@@ -55,7 +55,7 @@ class Screen2 extends StatelessWidget {
               height: 100,
               margin: EdgeInsets.symmetric(horizontal: 20),
               decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: Color(0xffF8F8F8),
                   boxShadow: shadowList,
                   borderRadius: BorderRadius.circular(20)),
             ),
@@ -70,7 +70,7 @@ class Screen2 extends StatelessWidget {
                       height: 50,
                       width: 50,
                       decoration: BoxDecoration(
-                          color: Color(0xff00587a),
+                          color: Color(0xff306060),
                           borderRadius: BorderRadius.circular(16)),
                       child: Icon(
                         Icons.favorite_border,
@@ -82,7 +82,7 @@ class Screen2 extends StatelessWidget {
                       child: Container(
                         height: 50,
                         decoration: BoxDecoration(
-                            color: Color(0xff00587a),
+                            color: Color(0xff306060),
                             borderRadius: BorderRadius.circular(16)),
                         child: Center(
                           child: Text(
@@ -95,13 +95,14 @@ class Screen2 extends StatelessWidget {
                     )
                   ],
                 ),
-                decoration: BoxDecoration(
-                  color: Color(0xff74c7b8),
-                  borderRadius: BorderRadius.only(
-                    topLeft: Radius.circular(40),
-                    topRight: Radius.circular(40),
-                  ),
-                )),
+                // decoration: BoxDecoration(
+                //   color: Color(0xff74c7b8),
+                //   borderRadius: BorderRadius.only(
+                //     topLeft: Radius.circular(40),
+                //     topRight: Radius.circular(40),
+                //   ),
+                // )
+                      ),
           ),
         ],
       ),
