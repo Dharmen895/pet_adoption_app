@@ -4,7 +4,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 Color darkBlue = Color(0xff426D6D);
 List<BoxShadow> shadowList = [
   BoxShadow(
-    color: Colors.grey[600],
+    color: Colors.grey[400],
     blurRadius: 30,
     offset: Offset(0, 10),
   ),
